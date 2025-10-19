@@ -31,6 +31,34 @@
             margin: 0;
         }
         
+        .school-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 4px solid #e74c3c;
+        }
+        
+        .school-header h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            border-bottom: none;
+        }
+        
+        .school-header h3 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: #ecf0f1;
+        }
+        
+        .students {
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: #bdc3c7;
+        }
+        
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
@@ -187,6 +215,14 @@
         
         /* Mejoras para móviles */
         @media (max-width: 768px) {
+            .school-header h2 {
+                font-size: 1.2rem;
+            }
+            
+            .school-header h3 {
+                font-size: 1rem;
+            }
+            
             h1 {
                 font-size: 1.8rem;
             }
@@ -221,6 +257,18 @@
         }
         
         @media (max-width: 480px) {
+            .school-header h2 {
+                font-size: 1.1rem;
+            }
+            
+            .school-header h3 {
+                font-size: 0.9rem;
+            }
+            
+            .students {
+                font-size: 0.9rem;
+            }
+            
             h1 {
                 font-size: 1.6rem;
             }
@@ -244,6 +292,13 @@
     </style>
 </head>
 <body>
+    <!-- Información del Colegio -->
+    <div class="school-header">
+        <h2>COLEGIO PROVINCIAL DE EDUCACIÓN SECUNDARIA N° 21</h2>
+        <h3>GOBERNADOR GREGORES - SANTA CRUZ</h3>
+        <p class="students">Victoria Almada, Zahira Cardozo, Isla Carolina - 4º Año B</p>
+    </div>
+    
     <header>
         <h1>🎣 Guía Completa sobre Phishing</h1>
         <p>Todo lo que necesitas saber para protegerte de ataques de phishing</p>
@@ -256,7 +311,7 @@
             <!-- Espacio para imagen 1 -->
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="phishing1.jpg" alt="Ejemplo de correo de phishing">
+                    <img src="phishing1.png" alt="Ejemplo de correo de phishing">
                 </div>
                 <p class="image-caption">Ejemplo de correo de phishing</p>
             </div>
@@ -271,7 +326,7 @@
             <!-- Espacio para imagen 2 -->
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="phishing2.webp" alt="Proceso típico de un ataque de phishing">
+                    <img src="phishing2.jpg" alt="Proceso típico de un ataque de phishing">
                 </div>
                 <p class="image-caption">Proceso típico de un ataque de phishing</p>
             </div>
@@ -372,7 +427,7 @@
             <!-- Espacio para imagen 5 -->
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="phishing5.webp" alt="Pasos a seguir si fuiste víctima de phishing">
+                    <img src="phishing5.jpg" alt="Pasos a seguir si fuiste víctima de phishing">
                 </div>
                 <p class="image-caption">Pasos a seguir si fuiste víctima de phishing</p>
             </div>
@@ -387,7 +442,7 @@
     </div>
     
     <footer>
-        <p>© 2023 Guía de Seguridad Informática - Protege tu información personal</p>
+        <p>© 2025 Guía de Seguridad Informática - Protege tu información personal</p>
     </footer>
 </body>
 </html>
