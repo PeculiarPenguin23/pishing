@@ -37,24 +37,26 @@
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
         }
         
         section {
             background-color: white;
             border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
             box-shadow: var(--box-shadow);
         }
         
@@ -63,11 +65,13 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--light-color);
+            font-size: 1.5rem;
         }
         
         h3 {
             color: var(--secondary-color);
             margin: 1.5rem 0 1rem;
+            font-size: 1.2rem;
         }
         
         p {
@@ -75,7 +79,7 @@
         }
         
         ul, ol {
-            margin-left: 1.5rem;
+            margin-left: 1.2rem;
             margin-bottom: 1.5rem;
         }
         
@@ -88,6 +92,7 @@
             border-left: 4px solid #ffc107;
             padding: 1rem;
             margin: 1.5rem 0;
+            border-radius: 4px;
         }
         
         .danger {
@@ -95,6 +100,7 @@
             border-left: 4px solid var(--accent-color);
             padding: 1rem;
             margin: 1.5rem 0;
+            border-radius: 4px;
         }
         
         .tip {
@@ -102,18 +108,23 @@
             border-left: 4px solid #4caf50;
             padding: 1rem;
             margin: 1.5rem 0;
+            border-radius: 4px;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.5rem 0;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
         }
         
         th, td {
-            padding: 12px 15px;
+            padding: 10px 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
+            min-width: 150px;
         }
         
         th {
@@ -139,18 +150,95 @@
             margin-top: 2rem;
         }
         
+        /* Estilos para imágenes */
+        .image-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            max-width: 600px;
+            background-color: #f5f5f5;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .image-caption {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        /* Mejoras para móviles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
             }
             
             section {
-                padding: 1.5rem;
+                padding: 1.2rem;
+            }
+            
+            .container {
+                padding: 1rem;
             }
             
             table {
-                display: block;
-                overflow-x: auto;
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+            }
+            
+            .image-placeholder {
+                max-width: 100%;
+            }
+            
+            .image-placeholder img {
+                max-height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            section {
+                padding: 1rem;
+            }
+            
+            ul, ol {
+                margin-left: 1rem;
+            }
+            
+            .image-placeholder img {
+                max-height: 200px;
             }
         }
     </style>
@@ -164,12 +252,30 @@
     <div class="container">
         <section id="que-es">
             <h2>🎣 ¿Qué es el Phishing?</h2>
+            
+            <!-- Espacio para imagen 1 -->
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <img src="phishing1.jpg" alt="Ejemplo de correo de phishing">
+                </div>
+                <p class="image-caption">Ejemplo de correo de phishing</p>
+            </div>
+            
             <p>El phishing es una técnica de ingeniería social que utilizan los ciberdelincuentes para suplantar la identidad de una persona, empresa o servicio de confianza (como un banco, una red social o una entidad gubernamental).</p>
             <p>El objetivo es manipular a la víctima para que revele información confidencial de forma fraudulenta, como contraseñas, números de tarjetas de crédito o datos personales. Los atacantes suelen crear una sensación de urgencia o alarma para que la víctima actúe sin pensar.</p>
         </section>
         
         <section id="como-funciona">
             <h2>🔎 ¿Cómo Funciona?</h2>
+            
+            <!-- Espacio para imagen 2 -->
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <img src="phishing2.webp" alt="Proceso típico de un ataque de phishing">
+                </div>
+                <p class="image-caption">Proceso típico de un ataque de phishing</p>
+            </div>
+            
             <p>Típicamente, los atacantes envían un mensaje fraudulento (el "anzuelo") que parece legítimo y que solicita una acción, como:</p>
             <ul>
                 <li>Hacer clic en un enlace que redirige a una página web falsa (con apariencia idéntica a la original) para ingresar credenciales.</li>
@@ -181,6 +287,14 @@
         <section id="tipos">
             <h2>✉️ Tipos Comunes de Phishing</h2>
             <p>El phishing ha evolucionado más allá del correo electrónico tradicional:</p>
+            
+            <!-- Espacio para imagen 3 -->
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <img src="phishing3.webp" alt="Diferentes tipos de ataques de phishing">
+                </div>
+                <p class="image-caption">Diferentes tipos de ataques de phishing</p>
+            </div>
             
             <table>
                 <thead>
@@ -222,6 +336,14 @@
             <h2>🛡️ Cómo Prevenir el Phishing</h2>
             <p>La mejor defensa es la educación y la cautela. Aquí tienes consejos clave:</p>
             
+            <!-- Espacio para imagen 4 -->
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <img src="phishing4.jpg" alt="Consejos para prevenir ataques de phishing">
+                </div>
+                <p class="image-caption">Consejos para prevenir ataques de phishing</p>
+            </div>
+            
             <div class="danger">
                 <h3>1. Desconfía de la Urgencia y las Solicitudes Inesperadas</h3>
                 <p><strong>Alerta Roja:</strong> Los mensajes que solicitan información confidencial con amenazas de "suspensión de cuenta" o "pago inmediato" son la principal señal.</p>
@@ -246,6 +368,15 @@
         
         <section id="victima">
             <h2>🚨 ¿Qué hacer si fuiste víctima?</h2>
+            
+            <!-- Espacio para imagen 5 -->
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <img src="phishing5.webp" alt="Pasos a seguir si fuiste víctima de phishing">
+                </div>
+                <p class="image-caption">Pasos a seguir si fuiste víctima de phishing</p>
+            </div>
+            
             <ol>
                 <li><strong>Cambia Inmediatamente las Contraseñas:</strong> Cambia la contraseña de la cuenta comprometida y de cualquier otra cuenta donde hayas usado la misma contraseña.</li>
                 <li><strong>Notifica a la Entidad Afectada:</strong> Si se trata de tu banco u otra institución, contacta con ellos de inmediato para reportar el fraude.</li>
