@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía sobre Phishing</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #4285f4;
+            --accent-color: #ea4335;
+            --light-color: #f8f9fa;
+            --dark-color: #202124;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f7fa;
+            padding: 0;
+            margin: 0;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .danger {
+            background-color: #ffebee;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tip {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎣 Guía Completa sobre Phishing</h1>
+        <p>Todo lo que necesitas saber para protegerte de ataques de phishing</p>
+    </header>
+    
+    <div class="container">
+        <section id="que-es">
+            <h2>🎣 ¿Qué es el Phishing?</h2>
+            <p>El phishing es una técnica de ingeniería social que utilizan los ciberdelincuentes para suplantar la identidad de una persona, empresa o servicio de confianza (como un banco, una red social o una entidad gubernamental).</p>
+            <p>El objetivo es manipular a la víctima para que revele información confidencial de forma fraudulenta, como contraseñas, números de tarjetas de crédito o datos personales. Los atacantes suelen crear una sensación de urgencia o alarma para que la víctima actúe sin pensar.</p>
+        </section>
+        
+        <section id="como-funciona">
+            <h2>🔎 ¿Cómo Funciona?</h2>
+            <p>Típicamente, los atacantes envían un mensaje fraudulento (el "anzuelo") que parece legítimo y que solicita una acción, como:</p>
+            <ul>
+                <li>Hacer clic en un enlace que redirige a una página web falsa (con apariencia idéntica a la original) para ingresar credenciales.</li>
+                <li>Descargar un archivo adjunto que contiene malware (software malicioso).</li>
+                <li>Responder directamente al mensaje con información personal o financiera.</li>
+            </ul>
+        </section>
+        
+        <section id="tipos">
+            <h2>✉️ Tipos Comunes de Phishing</h2>
+            <p>El phishing ha evolucionado más allá del correo electrónico tradicional:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Phishing</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phishing por Correo Electrónico</strong></td>
+                        <td>El método más común. Se envían mensajes masivos suplantando grandes empresas u organizaciones conocidas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spear Phishing</strong></td>
+                        <td>Ataque dirigido a un individuo o empresa específica. Los mensajes son altamente personalizados con información que solo el atacante ha investigado previamente, haciéndolos mucho más convincentes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Whaling</strong></td>
+                        <td>Es el spear phishing dirigido a "peces gordos" (ejecutivos de alto nivel, directores o figuras influyentes) para obtener información muy valiosa o realizar grandes fraudes financieros.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smishing</strong></td>
+                        <td>Phishing realizado a través de SMS (mensajes de texto).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vishing</strong></td>
+                        <td>Phishing realizado mediante una llamada de voz (voice phishing). El atacante se hace pasar por un agente para engañar a la víctima y que revele datos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pharming</strong></td>
+                        <td>Ataque más técnico donde se redirige el tráfico de navegación web a una página falsa, incluso si el usuario escribió la dirección web correcta, a menudo manipulando la configuración del DNS.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="prevencion">
+            <h2>🛡️ Cómo Prevenir el Phishing</h2>
+            <p>La mejor defensa es la educación y la cautela. Aquí tienes consejos clave:</p>
+            
+            <div class="danger">
+                <h3>1. Desconfía de la Urgencia y las Solicitudes Inesperadas</h3>
+                <p><strong>Alerta Roja:</strong> Los mensajes que solicitan información confidencial con amenazas de "suspensión de cuenta" o "pago inmediato" son la principal señal.</p>
+                <p><strong>Verificación Directa:</strong> Si recibes una alerta de un banco o servicio, nunca uses los enlaces del mensaje. En su lugar, ingresa manualmente a la página web oficial (escribiendo la dirección en el navegador) o contacta a la entidad a través de un número de teléfono conocido.</p>
+            </div>
+            
+            <div class="warning">
+                <h3>2. Examina el Remitente y la Dirección Web</h3>
+                <p><strong>Dirección de Correo:</strong> Revisa el dominio del remitente. A menudo, los correos falsos usan direcciones que parecen legítimas pero tienen errores sutiles (ej: micros0ft.com en lugar de microsoft.com).</p>
+                <p><strong>Enlaces (URLs):</strong> Antes de hacer clic, pasa el cursor sobre el enlace para ver la URL real que aparecerá en la esquina inferior del navegador. Si la URL de destino no coincide con el sitio web esperado, no hagas clic.</p>
+            </div>
+            
+            <div class="tip">
+                <h3>3. Medidas de Seguridad Técnicas</h3>
+                <ul>
+                    <li><strong>Autenticación de Dos Factores (2FA):</strong> Activa el 2FA en todas tus cuentas importantes. Esto requiere un segundo código (usualmente enviado a tu teléfono) además de la contraseña, lo que hace inútil una contraseña robada.</li>
+                    <li><strong>Software Actualizado:</strong> Mantén tu sistema operativo y software de seguridad (antivirus, antimalware) siempre actualizados para contar con las últimas protecciones.</li>
+                    <li><strong>No Abrir Archivos Adjuntos Inesperados:</strong> Evita descargar o abrir archivos adjuntos de correos electrónicos no solicitados o de remitentes desconocidos.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="victima">
+            <h2>🚨 ¿Qué hacer si fuiste víctima?</h2>
+            <ol>
+                <li><strong>Cambia Inmediatamente las Contraseñas:</strong> Cambia la contraseña de la cuenta comprometida y de cualquier otra cuenta donde hayas usado la misma contraseña.</li>
+                <li><strong>Notifica a la Entidad Afectada:</strong> Si se trata de tu banco u otra institución, contacta con ellos de inmediato para reportar el fraude.</li>
+                <li><strong>Reporta el Incidente:</strong> Informa el ataque a las autoridades competentes en ciberseguridad de tu país (como el CERT o INCIBE) y elimina el mensaje fraudulento.</li>
+                <li><strong>Escaneo de Dispositivos:</strong> Ejecuta un escaneo completo con tu software antivirus para asegurarte de que no se haya instalado ningún malware.</li>
+            </ol>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 Guía de Seguridad Informática - Protege tu información personal</p>
+    </footer>
+</body>
+</html>
